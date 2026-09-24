@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ZonaLibre — a free VPN project. No account, no payment, no forms. Simple, honest and open to everyone."
+    />
+    <meta name="theme-color" content="#f0fdfa" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>ZonaLibre — Free VPN, open to everyone</title>
+  </head>
+
+  <body>
+    <!-- ============ HEADER / NAVBAR ============ -->
+    <header class="site-header" id="header">
+      <div class="container header-inner">
+        <a class="brand" href="#top">
+          <svg class="brand-logo" viewBox="0 0 40 40" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop stop-color="#14b8a6" />
+                <stop offset="0.5" stop-color="#0ea5e9" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M20 2.5 34.5 8v11.3C34.5 28 28.3 35.4 20 37.5 11.7 35.4 5.5 28 5.5 19.3V8L20 2.5Z"
+              fill="url(#logoGrad)"
+            />
+            <path
+              d="M14 14.2h12l-9.4 11.6H26"
+              stroke="#fff"
+              stroke-width="2.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </svg>
+          <span class="brand-name">Zona<span>Libre</span></span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Main">
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#how" data-i18n="nav.how">How it works</a>
+          <a href="#promise" data-i18n="nav.promise">Our promise</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <span class="pill-badge pill-badge--hide-sm" data-i18n="nav.badge">
+            Android app · coming soon
+          </span>
+
+          <!-- Language switcher -->
+          <div class="lang" id="lang">
+            <button
+              class="lang-btn"
+              id="langBtn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3.2 9.5h17.6M3.2 14.5h17.6" />
+                <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z" />
+              </svg>
+              <span id="langLabel">English</span>
+              <svg class="ico ico-chev" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9.5 6 6 6-6" />
+              </svg>
+            </button>
+            <div class="lang-menu" id="langMenu" role="listbox" hidden>
+              <p class="lang-menu-title" data-i18n="nav.language">Language</p>
+              <div class="lang-menu-list" id="langList"></div>
+            </div>
+          </div>
+
+          <!-- Mobile menu toggle (checkbox = pure CSS) -->
+          <input type="checkbox" id="menuToggle" class="menu-toggle-input" />
+          <label for="menuToggle" class="menu-toggle" aria-label="Menu">
+            <svg class="ico ico-open" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="ico ico-close" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <div class="nav-mobile" id="navMobile">
+        <div class="container nav-mobile-inner">
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#how" data-i18n="nav.how">How it works</a>
+          <a href="#promise" data-i18n="nav.promise">Our promise</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <span class="pill-badge pill-badge--block" data-i18n="nav.badge">
+            Android app · coming soon
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-1"></span>
+          <span class="blob blob-2"></span>
+          <span class="blob blob-3"></span>
+          <span class="blob blob-4"></span>
+          <span class="grid-overlay"></span>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow-pill">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3.5 13.8 9l5.7 1.8-5.7 1.8L12 18.3 10.2 12.6 4.5 10.8 10.2 9 12 3.5Z" />
+              </svg>
+              <span data-i18n="hero.badge">Free · No sign-up · No payment</span>
+            </span>
+
+            <h1 class="hero-title">
+              <span data-i18n="hero.titleTop">The open internet,</span>
+              <span class="grad-text" data-i18n="hero.titleAccent">free</span>
+              <span data-i18n="hero.titleEnd">for everyone.</span>
+            </h1>
+
+            <p class="hero-sub" data-i18n="hero.subtitle">
+              ZonaLibre is a free VPN project. No account, no forms, no card.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#how">
+                <span data-i18n="hero.ctaPrimary">See how it works</span>
+                <svg class="ico ico-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4.5 12h15" />
+                  <path d="m13.5 6 6 6-6 6" />
+                </svg>
+              </a>
+              <a class="btn btn-ghost" href="#faq" data-i18n="hero.ctaSecondary">Read the FAQ</a>
+            </div>
+
+            <p class="hero-note">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 11v5M12 7.8v.4" />
+              </svg>
+              <span data-i18n="hero.note">Informational site only.</span>
+            </p>
+          </div>
+
+          <!-- Abstract animated orb (no phone mockup) -->
+          <div class="orb-wrap">
+            <div class="orb">
+              <span class="orb-conic" aria-hidden="true"></span>
+              <span class="orb-disc" aria-hidden="true"></span>
+              <span class="orb-ring r1" aria-hidden="true"></span>
+              <span class="orb-ring r2" aria-hidden="true"></span>
+              <span class="orb-ring r3" aria-hidden="true"></span>
+              <span class="orb-orbit" aria-hidden="true">
+                <i class="dot dot-a"></i>
+                <i class="dot dot-b"></i>
+              </span>
+
+              <div class="orb-core">
+                <span class="orb-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 5 6v5.5c0 4.3 2.9 8.2 7 9.5 4.1-1.3 7-5.2 7-9.5V6l-7-3Z" />
+                    <path d="m9.2 12 2 2 3.6-3.8" />
+                  </svg>
+                </span>
+                <p class="orb-title" data-i18n="hero.orbTitle">Built to stay simple</p>
+                <p class="orb-text" data-i18n="hero.orbText">One button, nothing to configure.</p>
+              </div>
+
+              <span class="chip chip-1">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.5" />
+                  <path d="M14 3v5h5" /><path d="m9 12 6 6M15 12l-6 6" />
+                </svg>
+                <span data-i18n="hero.chip0">No account</span>
+              </span>
+              <span class="chip chip-2">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="9" width="18" height="12" rx="2" />
+                  <path d="M3 13h18M12 9v12" />
+                </svg>
+                <span data-i18n="hero.chip1">No cost</span>
+              </span>
+              <span class="chip chip-3">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v6" /><path d="M7.8 6.2a6 6 0 1 0 8.4 0" />
+                </svg>
+                <span data-i18n="hero.chip2">Kept simple</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MARQUEE ============ -->
+      <div class="marquee">
+        <div class="marquee-track" id="marqueeTrack" dir="ltr"></div>
+      </div>
+
+      <!-- ============ FEATURES ============ -->
+      <section class="section" id="features">
+        <div class="soft-bg" aria-hidden="true">
+          <span class="blob blob-teal-left"></span>
+          <span class="blob blob-indigo-right"></span>
+        </div>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow eyebrow-teal" data-i18n="features.eyebrow">What you get</span>
+            <h2 class="section-title" data-i18n="features.title">Small project. Clear intentions.</h2>
+            <p class="section-sub" data-i18n="features.subtitle">Only what ZonaLibre sets out to do.</p>
+          </div>
+
+          <div class="cards-grid" id="featuresGrid"></div>
+        </div>
+      </section>
+
+      <!-- ============ HOW IT WORKS ============ -->
+      <section class="section section-alt" id="how">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow eyebrow-indigo" data-i18n="how.eyebrow">How it works</span>
+            <h2 class="section-title" data-i18n="how.title">Three steps.</h2>
+            <p class="section-sub" data-i18n="how.subtitle">Nothing to fill in.</p>
+          </div>
+
+          <div class="steps-wrap">
+            <span class="steps-line" aria-hidden="true"></span>
+            <div class="steps-grid" id="stepsGrid"></div>
+          </div>
+
+          <p class="callout">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 7.8v.4" />
+            </svg>
+            <span data-i18n="how.note">We keep this page short and honest.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ PROMISE ============ -->
+      <section class="section" id="promise">
+        <div class="container">
+          <div class="promise-card">
+            <span class="promise-deco d1" aria-hidden="true"></span>
+            <span class="promise-deco d2" aria-hidden="true"></span>
+            <span class="promise-dots" aria-hidden="true"></span>
+
+            <div class="promise-grid">
+              <div>
+                <span class="promise-eyebrow">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 20s-7.2-4.4-7.2-9.2A4 4 0 0 1 12 8.2 4 4 0 0 1 19.2 10.8C19.2 15.6 12 20 12 20Z" />
+                  </svg>
+                  <span data-i18n="promise.eyebrow">Our promise</span>
+                </span>
+                <h2 class="promise-title" data-i18n="promise.title">Free today, free tomorrow.</h2>
+                <p class="promise-body" data-i18n="promise.body">
+                  We put ZonaLibre at your disposal at no cost whatsoever.
+                </p>
+                <p class="promise-sign" data-i18n="promise.signature">— The ZonaLibre team</p>
+              </div>
+
+              <div class="stats" id="statsGrid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ (pure CSS accordion with <details>) ============ -->
+      <section class="section" id="faq">
+        <div class="soft-bg" aria-hidden="true">
+          <span class="blob blob-rose-right"></span>
+          <span class="blob blob-teal-left"></span>
+        </div>
+        <div class="container container-narrow">
+          <div class="section-head">
+            <span class="eyebrow eyebrow-rose" data-i18n="faq.eyebrow">Questions</span>
+            <h2 class="section-title" data-i18n="faq.title">Short answers</h2>
+            <p class="section-sub" data-i18n="faq.subtitle">If it isn't here, it isn't decided.</p>
+          </div>
+
+          <div class="faq-list" id="faqList"></div>
+        </div>
+      </section>
+
+      <!-- ============ HONEST / LEGAL NOTE ============ -->
+      <section class="section section-tight">
+        <div class="container container-mid">
+          <div class="legal-card">
+            <span class="legal-deco" aria-hidden="true"></span>
+            <span class="eyebrow-pill eyebrow-pill--muted">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 7.8v.4" />
+              </svg>
+              <span data-i18n="legal.eyebrow">Honest note</span>
+            </span>
+            <h2 class="legal-title" data-i18n="legal.title">A few words before you go</h2>
+            <p class="legal-intro" data-i18n="legal.intro">We would rather be clear:</p>
+            <ul class="legal-list" id="legalList"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <span class="footer-glow" aria-hidden="true"></span>
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="#top">
+            <svg class="brand-logo" viewBox="0 0 40 40" aria-hidden="true">
+              <path
+                d="M20 2.5 34.5 8v11.3C34.5 28 28.3 35.4 20 37.5 11.7 35.4 5.5 28 5.5 19.3V8L20 2.5Z"
+                fill="url(#logoGrad)"
+              />
+              <path
+                d="M14 14.2h12l-9.4 11.6H26"
+                stroke="#fff"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>
+            <span class="brand-name">Zona<span>Libre</span></span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">A free VPN project.</p>
+          <span class="status-pill">
+            <i class="status-dot" aria-hidden="true"></i>
+            <span data-i18n="footer.status">Android app · in development</span>
+          </span>
+        </div>
+
+        <div>
+          <h3 class="footer-head" data-i18n="footer.explore">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="#how" data-i18n="nav.how">How it works</a></li>
+            <li><a href="#promise" data-i18n="nav.promise">Our promise</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-head" data-i18n="footer.languagesTitle">Languages</h3>
+          <p class="footer-tagline" data-i18n="footer.languagesText">
+            This site is available in 10 languages.
+          </p>
+          <div class="lang-chips" id="langChips"></div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>
+          © <span id="year">2026</span> ZonaLibre.
+          <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+        <div class="footer-meta">
+          <span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4.5" y="10" width="15" height="10.5" rx="2.5" />
+              <path d="M8 10V7.5a4 4 0 0 1 8 0V10" />
+            </svg>
+            <span data-i18n="footer.noTracking">No tracking on this page.</span>
+          </span>
+          <span>
+            <svg class="ico ico-heart" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20s-7.2-4.4-7.2-9.2A4 4 0 0 1 12 8.2 4 4 0 0 1 19.2 10.8C19.2 15.6 12 20 12 20Z" />
+            </svg>
+            <span data-i18n="footer.madeWith">Made with care for an open internet.</span>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
